@@ -1,0 +1,389 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap'); */ /* Remove font import */
+
+:root {
+  /* Base Font */
+  --font-family-base: "Overpass Mono", monospace;
+
+  /* Background Color */
+  --color-background: rgb(255, 255, 255);
+
+  /* Nav Bar */
+  --font-nav-family: var(--font-family-base);
+  --font-nav-weight: 300;
+  --font-nav-color: rgb(0, 134, 179);
+  --font-nav-size: 20px;
+  --font-nav-line-height: 28px;
+
+  /* Categories Title */
+  --font-categories-title-family: var(--font-family-base);
+  --font-categories-title-weight: 700;
+  --font-categories-title-color: rgb(0, 0, 0);
+  --font-categories-title-size: 26px;
+  --font-categories-title-line-height: 31px;
+
+  /* Categories Items */
+  --font-categories-item-family: var(--font-family-base);
+  --font-categories-item-weight: 400;
+  --font-categories-item-color: rgb(0, 0, 0);
+  --font-categories-item-size: 16px;
+  --font-categories-item-line-height: 24px;
+
+  /* About Me */
+  --font-about-family: var(--font-family-base);
+  --font-about-weight: 400;
+  --font-about-color: rgb(0, 0, 0);
+  --font-about-size: 16px;
+  --font-about-line-height: 24px;
+
+  /* Date and Time */
+  --font-datetime-family: var(--font-family-base);
+  --font-datetime-weight: 400;
+  --font-datetime-color: rgb(153, 153, 153);
+  --font-datetime-size: 14px;
+  --font-datetime-line-height: 21px;
+
+  /* Main Article Heading */
+  --font-article-heading-family: var(--font-family-base);
+  --font-article-heading-weight: 700;
+  --font-article-heading-color: rgb(51, 51, 51);
+  --font-article-heading-size: 30px;
+  --font-article-heading-line-height: 36px;
+
+  /* Main Article Content */
+  --font-article-content-family: var(--font-family-base);
+  --font-article-content-weight: 400;
+  --font-article-content-color: rgb(0, 0, 0);
+  --font-article-content-size: 16px;
+  --font-article-content-line-height: 24px;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--font-article-content-color);
+  line-height: var(--font-article-content-line-height);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* Remove width: 100%; */
+}
+
+
+
+/* Header Styles */
+.site-header {
+  padding: 20px 0;
+  /* Remove background-color to show body background */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Keep shadow for separation */
+}
+
+.site-header .container {
+  /* Remove max-width: none; */
+  /* Remove margin: 0; */
+  padding: 0; /* Revert padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  /* Remove flex: 0 0 auto; */
+}
+
+.logo a {
+  font-family: var(--font-nav-family);
+  font-size: 24px;
+  font-weight: var(--font-nav-weight);
+  color: var(--font-nav-color);
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #ff4d4d;
+  transform: scale(1.1);
+}
+
+.logo span {
+  color: #ff4d4d;
+  margin-left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.logo a:hover span {
+  transform: scale(1.2);
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  /* Remove flex: 0 0 auto; */
+}
+
+.navbar a {
+  font-family: var(--font-nav-family);
+  font-size: var(--font-nav-size);
+  font-weight: var(--font-nav-weight);
+  color: var(--font-nav-color);
+  text-decoration: none;
+  padding: 5px 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  color: #ff4d4d;
+  transform: scale(1.1);
+}
+
+/* Intro Section */
+.intro {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.lead {
+  font-family: var(--font-about-family);
+  font-size: 24px;
+  color: var(--font-about-color);
+}
+
+/* Removed Post List Styles */
+/* 
+.post-list { ... }
+.category-title { ... }
+.post-item { ... }
+.post-meta { ... }
+.article-title a { ... }
+.article-title a:hover { ... }
+*/
+
+/* Footer */
+.site-footer {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--font-datetime-color);
+}
+
+/* REMOVE All CSS from here down related to animation */
+/* 
+.animated-background { ... }
+.animated-background img { ... }
+.animated-background img:nth-child(2) { ... }
+.animated-background img:nth-child(3) { ... }
+@keyframes scrollUp { ... }
+main.wrapper { ... }
+*/
+
+/* Home Anchor Section */
+.home-anchor {
+    padding: 20px 0;
+}
+
+.home-anchor .container {
+    display: flex;
+    justify-content: center;
+}
+
+.home-image {
+    display: block;
+    width: 100%;
+    max-width: 800px; /* Match container width */
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px; /* Increased rounded corners */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 15px; /* Match parent border-radius */
+}
+
+.home-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Welcome Text Section */
+.welcome-text {
+    padding: 20px 0;
+    text-align: center;
+    margin-top: -30px; /* Move up by 30px */
+}
+
+.welcome-text h2 {
+    font-family: var(--font-family-base);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--font-nav-color); /* Using the same color as saulina text */
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* Image Cards Section */
+.image-cards .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 800px; /* Ensure cards container matches home image width */
+    margin: 0 auto; /* Center the cards container */
+}
+
+.card-wrapper {
+  width: calc(25% - 20px); /* Width applied to wrapper */
+  min-width: 150px;
+  margin-bottom: 20px; /* Add space between rows */
+}
+
+.card {
+  background-color: #fff; /* Revert to solid white */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  /* Remove width/min-width from card itself */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 300px; /* Reverted height */
+  object-fit: cover;
+}
+
+/* Style for caption below card */
+.card-caption {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  padding: 10px 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .site-header .container {
+    padding: 0 15px;
+  }
+
+  .logo a {
+    font-size: 20px;
+  }
+
+  .navbar a {
+    font-size: 18px;
+  }
+
+  .image-cards .container {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .card-wrapper {
+      width: 100%;
+      min-width: unset;
+  }
+
+  .card {
+    /* Card styles remain the same */
+  }
+
+  .card img {
+    height: auto;
+  }
+
+  .card-caption {
+      text-align: center;
+  }
+
+  /* Removed mobile styles for post-item and post-meta */
+
+} /* Ensure closing brace for media query */
+
+/* Post Image */
+.post-image {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.post-image:first-child {
+    margin-top: 100px; /* Add 100px top spacing for first image */
+}
+
+.featured-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Header */
+.post-header {
+    margin-bottom: 40px; /* Add spacing between header and content */
+    margin-top: 100px; /* Add 100px top spacing */
+}
+
+/* Article Heading */
+.article-heading {
+    font-family: var(--font-article-heading-family);
+    font-size: var(--font-article-heading-size);
+    font-weight: var(--font-article-heading-weight);
+    color: var(--font-article-heading-color);
+    margin-bottom: 15px; /* Reduce spacing below heading */
+    margin-top: 0; /* Ensure no top margin */
+}
+
+/* Post Meta */
+.post-meta {
+    font-family: var(--font-datetime-family);
+    font-size: var(--font-datetime-size);
+    color: var(--font-datetime-color);
+    margin-bottom: 0; /* Remove bottom margin from meta */
+}
+
+/* Article Content */
+.article-content {
+    font-family: var(--font-article-content-family);
+    font-size: var(--font-article-content-size);
+    color: var(--font-article-content-color);
+    line-height: var(--font-article-content-line-height);
+    margin-bottom: 20px; /* Keep spacing between paragraphs */
+}
+
+/* Content Section */
+.content {
+    padding-top: 0; /* Remove top padding from content */
+    padding-bottom: 40px;
+}
