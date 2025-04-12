@@ -1,4 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap'); */ /* Remove font import */
+/* @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap'); */
+/* Remove font import */
 
 :root {
   /* Base Font */
@@ -84,13 +85,15 @@ body {
 .site-header {
   padding: 20px 0;
   /* Remove background-color to show body background */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Keep shadow for separation */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* Keep shadow for separation */
 }
 
 .site-header .container {
   /* Remove max-width: none; */
   /* Remove margin: 0; */
-  padding: 0; /* Revert padding */
+  padding: 0;
+  /* Revert padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -194,76 +197,84 @@ main.wrapper { ... }
 
 /* Home Anchor Section */
 .home-anchor {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .home-anchor .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .home-image {
-    display: block;
-    width: 100%;
-    max-width: 800px; /* Match container width */
-    height: 200px;
-    overflow: hidden;
-    border-radius: 15px; /* Increased rounded corners */
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  /* Match container width */
+  height: 200px;
+  overflow: hidden;
+  border-radius: 15px;
+  /* Increased rounded corners */
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Added subtle shadow */
 }
 
 .home-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 15px; /* Match parent border-radius */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+  /* Match parent border-radius */
 }
 
 .home-image:hover img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Welcome Text Section */
 .welcome-text {
-    padding: 20px 0;
-    text-align: center;
-    margin-top: -30px; /* Move up by 30px */
+  padding: 20px 0;
+  text-align: center;
+  margin-top: -30px;
+  /* Move up by 30px */
 }
 
 .welcome-text h2 {
-    font-family: var(--font-family-base);
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--font-nav-color); /* Using the same color as saulina text */
-    margin: 0;
-    padding: 10px 0;
+  font-family: var(--font-family-base);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--font-nav-color);
+  /* Using the same color as saulina text */
+  margin: 0;
+  padding: 10px 0;
 }
 
 /* Image Cards Section */
 .image-cards .container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-    position: relative;
-    max-width: 800px; /* Ensure cards container matches home image width */
-    margin: 0 auto; /* Center the cards container */
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  max-width: 800px;
+  /* Ensure cards container matches home image width */
+  margin: 0 auto;
+  /* Center the cards container */
 }
 
+/* Card Wrapper */
 .card-wrapper {
-  width: calc(25% - 20px); /* Width applied to wrapper */
+  width: calc(25% - 20px);
   min-width: 150px;
-  margin-bottom: 20px; /* Add space between rows */
+  margin-bottom: 20px;
 }
 
 .card {
-  background-color: #fff; /* Revert to solid white */
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  /* Remove width/min-width from card itself */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -275,7 +286,7 @@ main.wrapper { ... }
 .card img {
   display: block;
   width: 100%;
-  height: 300px; /* Reverted height */
+  height: 300px;
   object-fit: cover;
 }
 
@@ -285,6 +296,16 @@ main.wrapper { ... }
   font-size: 16px;
   color: #555;
   padding: 10px 0;
+}
+
+/* Content Section for Cards */
+.content .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Media Query for Mobile Devices */
@@ -311,8 +332,8 @@ main.wrapper { ... }
   }
 
   .card-wrapper {
-      width: 100%;
-      min-width: unset;
+    width: 100%;
+    min-width: unset;
   }
 
   .card {
@@ -324,66 +345,157 @@ main.wrapper { ... }
   }
 
   .card-caption {
-      text-align: center;
+    text-align: center;
   }
 
   /* Removed mobile styles for post-item and post-meta */
 
-} /* Ensure closing brace for media query */
+}
+
+/* Ensure closing brace for media query */
 
 /* Post Image */
 .post-image {
-    margin: 30px 0;
-    text-align: center;
+  margin: 30px 0;
+  text-align: center;
 }
 
 .post-image:first-child {
-    margin-top: 100px; /* Add 100px top spacing for first image */
+  margin-top: 0;
+  /* Remove the top margin */
 }
 
-.featured-image {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Post Content */
+.post {
+  flex: 1;
+  margin: 0;
+  padding: 0;
 }
 
 /* Post Header */
 .post-header {
-    margin-bottom: 40px; /* Add spacing between header and content */
-    margin-top: 100px; /* Add 100px top spacing */
+  margin: 0 0 40px 0;
+  padding: 0;
 }
 
 /* Article Heading */
 .article-heading {
-    font-family: var(--font-article-heading-family);
-    font-size: var(--font-article-heading-size);
-    font-weight: var(--font-article-heading-weight);
-    color: var(--font-article-heading-color);
-    margin-bottom: 15px; /* Reduce spacing below heading */
-    margin-top: 0; /* Ensure no top margin */
+  font-family: var(--font-article-heading-family);
+  font-size: 42px;
+  font-weight: var(--font-article-heading-weight);
+  color: var(--font-article-heading-color);
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 /* Post Meta */
 .post-meta {
-    font-family: var(--font-datetime-family);
-    font-size: var(--font-datetime-size);
-    color: var(--font-datetime-color);
-    margin-bottom: 0; /* Remove bottom margin from meta */
+  font-family: var(--font-datetime-family);
+  font-size: 18px;
+  color: var(--font-datetime-color);
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
 }
 
 /* Article Content */
 .article-content {
-    font-family: var(--font-article-content-family);
-    font-size: var(--font-article-content-size);
-    color: var(--font-article-content-color);
-    line-height: var(--font-article-content-line-height);
-    margin-bottom: 20px; /* Keep spacing between paragraphs */
+  font-family: var(--font-article-content-family);
+  font-size: var(--font-article-content-size);
+  line-height: var(--font-article-content-line-height);
+  color: var(--font-article-content-color);
+  margin-bottom: 20px;
 }
 
 /* Content Section */
 .content {
-    padding-top: 0; /* Remove top padding from content */
-    padding-bottom: 40px;
+  padding: 40px 0;
+}
+
+.content .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Featured Image and Header Container */
+.image-header-container {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+/* Featured Image in Post */
+.featured-image {
+  width: 400px;
+  height: 600px;
+  flex-shrink: 0;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Post Header */
+.post-header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post-meta {
+  font-family: var(--font-datetime-family);
+  font-size: var(--font-datetime-size);
+  color: var(--font-datetime-color);
+}
+
+/* Post Content */
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .image-header-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .post-header {
+    text-align: center;
+  }
+
+  .article-heading {
+    font-size: 32px;
+  }
+
+  .post-meta {
+    font-size: 16px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-heading {
+    font-size: 28px;
+  }
+
+  .post-meta {
+    font-size: 14px;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
